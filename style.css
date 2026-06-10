@@ -1,0 +1,365 @@
+/* -----------------------------------------------------------
+   1. GLOBAL STYLES & RESET
+----------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #242a45;
+    overflow-x: hidden; /* Horizontal scrollbar ko rokne ke liye */
+}
+
+/* -----------------------------------------------------------
+   2. NAVBAR STYLING (DESKTOP)
+----------------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #242a45;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #9194a1;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fa5757;
+}
+
+.nav-links .login-btn {
+    background-color: #fa5757;
+    color: white !important;
+    padding: 12px 32px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle, .hamburger {
+    display: none;
+}
+
+/* -----------------------------------------------------------
+   3. HERO SECTION STYLING (DESKTOP)
+----------------------------------------------------------- */
+.hero-section {
+    padding: 60px 0 100px 0;
+    position: relative;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #242a45;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #9194a1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-chrome {
+    background-color: #5267df;
+    color: white;
+}
+
+.btn-firefox {
+    background-color: #f7f7f7;
+    color: #575962;
+}
+
+.hero-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.blue-bg-blob {
+    position: absolute;
+    background-color: #5267df;
+    bottom: -20px;
+    right: -150px;
+    width: 100%;
+    height: 80%;
+    border-bottom-left-radius: 150px;
+    z-index: 1;
+}
+
+/* -----------------------------------------------------------
+   4. FEATURES SECTION STYLING (DESKTOP)
+----------------------------------------------------------- */
+.features-section {
+    padding: 80px 0;
+    position: relative;
+      background-color:rgb(247, 247, 247) ;
+}
+
+.features-header {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    font-size: 16px;
+    color: #9194a1;
+    line-height: 1.6;
+}
+
+.feature-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 80px;
+  
+}
+
+
+.feature-image-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.feature-img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.blue-left-blob {
+    position: absolute;
+    background-color: #5267df;
+    bottom: -40px;
+    left: -150px;
+    width: 100%;
+    height: 85%;
+    border-bottom-right-radius: 150px;
+    z-index: 1;
+}
+
+.feature-text-wrapper {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.feature-text {
+    font-size: 16px;
+    color: #9194a1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-more-info {
+    display: inline-block;
+    background-color: #5267df;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* -----------------------------------------------------------
+   5. MOBILE RESPONSIVE MEDIA QUERY (AS PER YOUR SCREENSHOTS)
+----------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    
+    /* --- Navbar Mobile --- */
+    .navbar {
+        padding: 40px 30px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 22px;
+        height: 16px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #242a45;
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(36, 42, 69, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 99;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+
+    /* --- Hero Section Mobile --- */
+    .hero-container {
+        flex-direction: column-reverse; /* Pehle image aayegi phir text (jaisai aapke image 1 me h) */
+        text-align: center;
+        padding: 0 32px;
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Buttons ek ke niche ek stack ho jayenge (Image 2 ke mutabiq) */
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Mobile standard design ke mutabiq shape ko temporary responsive hide/adjust karte hain */
+    .blue-bg-blob {
+        right: -50px;
+        width: 100%;
+        height: 80%;
+    }
+
+    /* --- Features Section Mobile --- */
+    .features-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-desc {
+        font-size: 15px;
+    }
+
+    .feature-detail-container {
+        flex-direction: column; /* Image upar aur text niche stack ho jayega (Image 3 aur 4 ke mutabiq) */
+        text-align: center;
+        padding: 0 32px;
+        gap: 40px;
+    }
+
+    .feature-title {
+        font-size: 24px;
+    }
+
+    .feature-text {
+        font-size: 15px;
+    }
+
+    .blue-left-blob {
+        left: -50px;
+        width: 100%;
+    }
+}
